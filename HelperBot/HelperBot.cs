@@ -58,7 +58,7 @@ namespace HelperBot
         {
             Commands.ChatCommands.Add(new Command("helperbot.cmds", CommandHandler, Config.BaseCommandName)
             {
-                HelpText = string.Format("Usage: {0}{1} <command>", TShock.Config.CommandSpecifier, Config.BaseCommandName)
+                HelpText = string.Format("Usage: {0}{1} <command>", TShock.Config.Settings.CommandSpecifier, Config.BaseCommandName)
             });
         }
 
@@ -160,7 +160,7 @@ namespace HelperBot
                             Commands.ChatCommands.RemoveAll(x => x.Permissions.Contains("helperbot.cmds"));
                             Commands.ChatCommands.Add(new Command("helperbot.cmds", CommandHandler, Config.BaseCommandName)
                             {
-                                HelpText = string.Format("Usage: {0}{1} <command>", TShock.Config.CommandSpecifier, Config.BaseCommandName)
+                                HelpText = string.Format("Usage: {0}{1} <command>", TShock.Config.Settings.CommandSpecifier, Config.BaseCommandName)
                             });
                             ply.SendMessage(String.Format("[PM] {0}: Reload complete",
                                 Config.BotName),
@@ -178,7 +178,7 @@ namespace HelperBot
                     {
                         ply.SendMessage(String.Format("[PM] {0}: Usage: {1}{2} <command>",
                                 Config.BotName,
-                                TShock.Config.CommandSpecifier,
+                                TShock.Config.Settings.CommandSpecifier,
                                 Config.BaseCommandName),
                                 (byte)Config.BotColor[0], (byte)Config.BotColor[1], (byte)Config.BotColor[2]);
                         ply.SendMessage(String.Format("[PM] {0}: Commands: reload",

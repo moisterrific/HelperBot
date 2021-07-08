@@ -35,13 +35,13 @@ namespace HelperBot
                 config.QuestionsAndAnswers.Add(new QA()
                 {
                     Question = @"How (can i|to) register(\?|)",
-                    Answer = string.Format("Use {0}register <password>", TShock.Config.CommandSpecifier)
+                    Answer = string.Format("Use {0}register <password>", TShock.Config.Settings.CommandSpecifier)
                 });
 
                 config.QuestionsAndAnswers.Add(new QA()
                 {
                     Question = @"How i go to the spawn(\?|)",
-                    Answer = string.Format("Use {0}spawn", TShock.Config.CommandSpecifier)
+                    Answer = string.Format("Use {0}spawn", TShock.Config.Settings.CommandSpecifier)
                 });
 
                 config.QuestionsAndAnswers.Add(new QA()
